@@ -9,7 +9,7 @@
 #import "SpeechManager.h"
 
 @interface SpeechManager()
-@property (readonly, nonatomic) AVSpeechSynthesizer *speechSynthesizer;
+@property (nonatomic,strong) AVSpeechSynthesizer *speechSynthesizer;
 @property (nonatomic, strong) NSArray* touchSoundCandidate;
 @property (nonatomic, strong) NSArray* deadSoundCandidate;
 
@@ -23,6 +23,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedManager = [[self alloc] init];
+        sharedManager.speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
     });
     return sharedManager;
 }
@@ -38,12 +39,8 @@
 }
 
 -(void)TouchSpeak{
-    if (self.speechSynthesizer == nil) {
-        _speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
-    }
-    else{
-        [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
-    }
+    [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    
     NSArray* candidates = @[@"爽",@"太爽",@"過太爽"];
     candidates = @[@"痞",@"痞客",@"痞客邦"];
     
@@ -57,7 +54,6 @@
 }
 
 -(void)DeadSpeak{
-    
     [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
     
     NSArray* candidates = @[@"你已經死了",@"好像有點弱"];
