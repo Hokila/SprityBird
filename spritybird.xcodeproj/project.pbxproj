@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		576A22CE18B9CB8E001338C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6A0A418A6F53400FEBE9B /* Main.storyboard */; };
+		5A9BDE1F18DD620200573AAD /* Image001.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9BDE1C18DD620200573AAD /* Image001.png */; };
+		5A9BDE2118DD620F00573AAD /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9BDE2018DD620F00573AAD /* CoreImage.framework */; };
+		5A9BDE2418DD667D00573AAD /* SpeechManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9BDE2318DD667D00573AAD /* SpeechManager.m */; };
+		5A9BDE2A18DD708000573AAD /* RoleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9BDE2918DD708000573AAD /* RoleVC.m */; };
+		5A9BDE2C18DD768E00573AAD /* joeBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9BDE2B18DD768E00573AAD /* joeBG.png */; };
+		5A9BDE3218DD7BCF00573AAD /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9BDE2F18DD7BCF00573AAD /* NSString+MD5Addition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5A9BDE3318DD7BCF00573AAD /* UIImageView+ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9BDE3118DD7BCF00573AAD /* UIImageView+ImageCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5A9BDE3518DD7E3A00573AAD /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9BDE3418DD7E3A00573AAD /* logo.png */; };
 		821A755618AD616C00B376D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C6A0A218A6F53400FEBE9B /* AppDelegate.m */; };
-		821A755718AD617800B376D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C6A0A818A6F53400FEBE9B /* ViewController.m */; };
+		821A755718AD617800B376D5 /* GameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C6A0A818A6F53400FEBE9B /* GameVC.m */; };
 		821A755818AD617800B376D5 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C6A0C818A6FF4200FEBE9B /* Scene.m */; };
 		821A755918AD617800B376D5 /* SKScrollingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C6A0DB18A7918800FEBE9B /* SKScrollingNode.m */; };
 		821A755D18AD617800B376D5 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 8274FC2918A7E13200FEBCE7 /* Math.m */; };
@@ -55,6 +63,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A9BDE1C18DD620200573AAD /* Image001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image001.png; sourceTree = "<group>"; };
+		5A9BDE2018DD620F00573AAD /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		5A9BDE2218DD667D00573AAD /* SpeechManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechManager.h; sourceTree = "<group>"; };
+		5A9BDE2318DD667D00573AAD /* SpeechManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechManager.m; sourceTree = "<group>"; };
+		5A9BDE2518DD693800573AAD /* roledefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = roledefine.h; path = spritybird/Classes/roledefine.h; sourceTree = SOURCE_ROOT; };
+		5A9BDE2818DD708000573AAD /* RoleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoleVC.h; sourceTree = "<group>"; };
+		5A9BDE2918DD708000573AAD /* RoleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoleVC.m; sourceTree = "<group>"; };
+		5A9BDE2B18DD768E00573AAD /* joeBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joeBG.png; sourceTree = "<group>"; };
+		5A9BDE2E18DD7BCF00573AAD /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
+		5A9BDE2F18DD7BCF00573AAD /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
+		5A9BDE3018DD7BCF00573AAD /* UIImageView+ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ImageCache.h"; sourceTree = "<group>"; };
+		5A9BDE3118DD7BCF00573AAD /* UIImageView+ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ImageCache.m"; sourceTree = "<group>"; };
+		5A9BDE3418DD7E3A00573AAD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		823C184318B3E57F00C9BD2F /* taptap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taptap@2x.png"; sourceTree = "<group>"; };
 		823C184418B3E57F00C9BD2F /* get_ready@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "get_ready@2x.png"; sourceTree = "<group>"; };
 		823C184718B3F1BB00C9BD2F /* medal_silver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medal_silver@2x.png"; sourceTree = "<group>"; };
@@ -87,8 +108,8 @@
 		82C6A0A118A6F53400FEBE9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82C6A0A218A6F53400FEBE9B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		82C6A0A518A6F53400FEBE9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		82C6A0A718A6F53400FEBE9B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		82C6A0A818A6F53400FEBE9B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		82C6A0A718A6F53400FEBE9B /* GameVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameVC.h; sourceTree = "<group>"; };
+		82C6A0A818A6F53400FEBE9B /* GameVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameVC.m; sourceTree = "<group>"; };
 		82C6A0AA18A6F53400FEBE9B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		82C6A0B018A6F53400FEBE9B /* spritybirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spritybirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C6A0B118A6F53400FEBE9B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -110,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A9BDE2118DD620F00573AAD /* CoreImage.framework in Frameworks */,
 				82C6A0CB18A6FF7400FEBE9B /* SpriteKit.framework in Frameworks */,
 				82C6A09518A6F53400FEBE9B /* CoreGraphics.framework in Frameworks */,
 				82C6A09718A6F53400FEBE9B /* UIKit.framework in Frameworks */,
@@ -130,15 +152,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A9BDE2D18DD7BCF00573AAD /* ImageCacheLite */ = {
+			isa = PBXGroup;
+			children = (
+				5A9BDE2E18DD7BCF00573AAD /* NSString+MD5Addition.h */,
+				5A9BDE2F18DD7BCF00573AAD /* NSString+MD5Addition.m */,
+				5A9BDE3018DD7BCF00573AAD /* UIImageView+ImageCache.h */,
+				5A9BDE3118DD7BCF00573AAD /* UIImageView+ImageCache.m */,
+			);
+			path = ImageCacheLite;
+			sourceTree = "<group>";
+		};
 		8274FC3318A7F14000FEBCE7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5A9BDE2B18DD768E00573AAD /* joeBG.png */,
+				5A9BDE1C18DD620200573AAD /* Image001.png */,
 				823C184718B3F1BB00C9BD2F /* medal_silver@2x.png */,
 				823C184818B3F1BB00C9BD2F /* medal_gold@2x.png */,
 				823C184918B3F1BB00C9BD2F /* medal_bronze@2x.png */,
 				823C185318B3FBCC00C9BD2F /* back@2x.png */,
 				823C184A18B3F1BB00C9BD2F /* medal_plate@2x.png */,
 				823C184B18B3F1BB00C9BD2F /* game_over@2x.png */,
+				5A9BDE3418DD7E3A00573AAD /* logo.png */,
 				823C184C18B3F1BB00C9BD2F /* medal_platinum@2x.png */,
 				823C184318B3E57F00C9BD2F /* taptap@2x.png */,
 				823C184418B3E57F00C9BD2F /* get_ready@2x.png */,
@@ -183,6 +219,7 @@
 		82C6A09118A6F53400FEBE9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A9BDE2018DD620F00573AAD /* CoreImage.framework */,
 				82C6A0CA18A6FF7400FEBE9B /* SpriteKit.framework */,
 				82C6A09218A6F53400FEBE9B /* Foundation.framework */,
 				82C6A09418A6F53400FEBE9B /* CoreGraphics.framework */,
@@ -195,6 +232,7 @@
 		82C6A09818A6F53400FEBE9B /* spritybird */ = {
 			isa = PBXGroup;
 			children = (
+				5A9BDE2D18DD7BCF00573AAD /* ImageCacheLite */,
 				82C6A0D218A790BA00FEBE9B /* Classes */,
 				82C6A0D918A7913200FEBE9B /* Resources */,
 				82C6A09918A6F53400FEBE9B /* Supporting Files */,
@@ -250,8 +288,13 @@
 		82C6A0D318A790C000FEBE9B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				82C6A0A718A6F53400FEBE9B /* ViewController.h */,
-				82C6A0A818A6F53400FEBE9B /* ViewController.m */,
+				5A9BDE2818DD708000573AAD /* RoleVC.h */,
+				5A9BDE2918DD708000573AAD /* RoleVC.m */,
+				82C6A0A718A6F53400FEBE9B /* GameVC.h */,
+				82C6A0A818A6F53400FEBE9B /* GameVC.m */,
+				5A9BDE2218DD667D00573AAD /* SpeechManager.h */,
+				5A9BDE2318DD667D00573AAD /* SpeechManager.m */,
+				5A9BDE2518DD693800573AAD /* roledefine.h */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -377,12 +420,15 @@
 				823C184D18B3F1BB00C9BD2F /* medal_silver@2x.png in Resources */,
 				821A756818AD618A00B376D5 /* Images.xcassets in Resources */,
 				823C185118B3F1BB00C9BD2F /* game_over@2x.png in Resources */,
+				5A9BDE1F18DD620200573AAD /* Image001.png in Resources */,
 				823C185418B3FBCC00C9BD2F /* back@2x.png in Resources */,
 				82457DC018B2C3490042CF82 /* pipe_bottom@2x.png in Resources */,
 				823C184518B3E57F00C9BD2F /* taptap@2x.png in Resources */,
 				823C184E18B3F1BB00C9BD2F /* medal_gold@2x.png in Resources */,
 				823C185018B3F1BB00C9BD2F /* medal_plate@2x.png in Resources */,
 				82FEEB9418B550BF00AA6C66 /* Main-iPad.storyboard in Resources */,
+				5A9BDE3518DD7E3A00573AAD /* logo.png in Resources */,
+				5A9BDE2C18DD768E00573AAD /* joeBG.png in Resources */,
 				823C185218B3F1BB00C9BD2F /* medal_platinum@2x.png in Resources */,
 				823C184F18B3F1BB00C9BD2F /* medal_bronze@2x.png in Resources */,
 				82457DBF18B2C3490042CF82 /* pipe_top@2x.png in Resources */,
@@ -410,7 +456,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				821A756A18AD61B100B376D5 /* main.m in Sources */,
-				821A755718AD617800B376D5 /* ViewController.m in Sources */,
+				5A9BDE3318DD7BCF00573AAD /* UIImageView+ImageCache.m in Sources */,
+				5A9BDE3218DD7BCF00573AAD /* NSString+MD5Addition.m in Sources */,
+				821A755718AD617800B376D5 /* GameVC.m in Sources */,
+				5A9BDE2A18DD708000573AAD /* RoleVC.m in Sources */,
+				5A9BDE2418DD667D00573AAD /* SpeechManager.m in Sources */,
 				821A755818AD617800B376D5 /* Scene.m in Sources */,
 				821A755918AD617800B376D5 /* SKScrollingNode.m in Sources */,
 				82B99B4618B132B40099A4FE /* Score.m in Sources */,

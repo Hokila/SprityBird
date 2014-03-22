@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Alexis Creuzot. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GameVC.h"
 #import "Scene.h"
 #import "Score.h"
 
-@interface ViewController ()
+@interface GameVC ()
 @property (weak,nonatomic) IBOutlet SKView * gameView;
 @property (weak,nonatomic) IBOutlet UIView * getReadyView;
 
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation ViewController
+@implementation GameVC
 {
     Scene * scene;
     UIView * flash;

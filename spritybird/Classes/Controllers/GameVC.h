@@ -8,6 +8,6 @@
 
 #import "Scene.h"
 
-@interface ViewController : UIViewController<SceneDelegate>
+@interface GameVC : UIViewController<SceneDelegate>
 
 @end

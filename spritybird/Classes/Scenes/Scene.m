@@ -1,5 +1,5 @@
 //
-//  BouncingScene.m
+//  ncingScene.m
 //  Bouncing
 //
 //  Created by Seung Kyun Nam on 13. 7. 24..
@@ -20,6 +20,8 @@
 #define OBSTACLE_MIN_HEIGHT 60
 #define OBSTACLE_INTERVAL_SPACE 130
 
+#import "SpeechManager.h"
+
 @implementation Scene{
     SKScrollingNode * floor;
     SKScrollingNode * back;
@@ -29,13 +31,17 @@
     int nbObstacles;
     NSMutableArray * topPipes;
     NSMutableArray * bottomPipes;
+    SpeechManager* speakManager;
 }
 
 static bool wasted = NO;
-
 - (id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         self.physicsWorld.contactDelegate = self;
+        
+        speakManager = [SpeechManager shareInstance];
+        [speakManager setRole:joe];
+        
         [self startGame];
     }
     return self;
@@ -66,7 +72,9 @@ static bool wasted = NO;
 
 - (void) createBackground
 {
-    back = [SKScrollingNode scrollingNodeWithImageNamed:@"back" inContainerWidth:WIDTH(self)];
+    
+    back = [SKScrollingNode scrollingNodeWithImageNamed:@"Image001" inContainerWidth:WIDTH(self)];
+    
     [back setScrollingSpeed:BACK_SCROLLING_SPEED];
     [back setAnchorPoint:CGPointZero];
     [back setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame]];
@@ -152,6 +160,7 @@ static bool wasted = NO;
             }
         }
         [bird bounce];
+        [speakManager TouchSpeak];
     }
 }
 
@@ -254,5 +263,7 @@ static bool wasted = NO;
     if([self.delegate respondsToSelector:@selector(eventWasted)]){
         [self.delegate eventWasted];
     }
+    
+    [speakManager DeadSpeak];
 }
 @end
