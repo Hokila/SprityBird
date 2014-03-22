@@ -7,7 +7,8 @@
 //
 
 #import "BirdNode.h"
-
+#import "UIImageView+ImageCache.h"
+#import "NSString+MD5Addition.h"
 #define VERTICAL_SPEED 1
 #define VERTICAL_DELTA 5.0
 
@@ -26,20 +27,34 @@ static bool goingUp = false;
     if(self = [super init]){
         
         // TODO : use texture atlas
-        SKTexture* birdTexture1 = [SKTexture textureWithImageNamed:@"bird_1"];
-        birdTexture1.filteringMode = SKTextureFilteringNearest;
-        SKTexture* birdTexture2 = [SKTexture textureWithImageNamed:@"bird_2"];
-        birdTexture2.filteringMode = SKTextureFilteringNearest;
-        SKTexture* birdTexture3 = [SKTexture textureWithImageNamed:@"bird_3"];
-        birdTexture2.filteringMode = SKTextureFilteringNearest;
+        NSString*account = [[NSUserDefaults standardUserDefaults]objectForKey:@"role"];
+        if ([account isEqualToString:@"joe"]) {
+            SKTexture* birdTexture1 = [SKTexture textureWithImageNamed:@"joe.png"];
+            self = [BirdNode spriteNodeWithTexture:birdTexture1];
+            self.size = CGSizeMake(50,50);
+        }
+        else if ([account isEqualToString:@"zonble"]){
+            SKTexture* birdTexture1 = [SKTexture textureWithImageNamed:@"zonble.png"];
+            self = [BirdNode spriteNodeWithTexture:birdTexture1];
+            self.size = CGSizeMake(50,50);
+        }
+        else{
+            SKTexture* birdTexture1 = [SKTexture textureWithImageNamed:@"bird_1"];
+            birdTexture1.filteringMode = SKTextureFilteringNearest;
+            SKTexture* birdTexture2 = [SKTexture textureWithImageNamed:@"bird_2"];
+            birdTexture2.filteringMode = SKTextureFilteringNearest;
+            SKTexture* birdTexture3 = [SKTexture textureWithImageNamed:@"bird_3"];
+            birdTexture2.filteringMode = SKTextureFilteringNearest;
 
-        self = [BirdNode spriteNodeWithTexture:birdTexture1];
+            self = [BirdNode spriteNodeWithTexture:birdTexture1];
+            
+            self.flap = [SKAction animateWithTextures:@[birdTexture1, birdTexture2,birdTexture3] timePerFrame:0.2];
+            self.flapForever = [SKAction repeatActionForever:self.flap];
+            
+            [self setTexture:birdTexture1];
+            [self runAction:self.flapForever withKey:@"flapForever"];
+        }
         
-        self.flap = [SKAction animateWithTextures:@[birdTexture1, birdTexture2,birdTexture3] timePerFrame:0.2];
-        self.flapForever = [SKAction repeatActionForever:self.flap];
-        
-        [self setTexture:birdTexture1];
-        [self runAction:self.flapForever withKey:@"flapForever"];
     }
     return self;
 }

@@ -20,9 +20,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    roles = [[NSArray alloc]initWithObjects:@"joe",@"hokila",@"janyac " ,nil];
+    roles = [[NSArray alloc]initWithObjects:@"joe",@"zonble",@"jean10312001",@"janyac",@"kk9442001" ,nil];
     
-    
+    [self loadUserpicwithUserName:roles[0]];
 }
 #pragma -mark picker delegate
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
@@ -39,11 +39,6 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-
-    //save account
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[NSNumber numberWithInteger:row] forKey:@"role"];
-    [defaults synchronize];
     
     //load BG
     NSString* user_account = roles[row];
@@ -51,14 +46,23 @@
 }
 
 -(void)loadUserpicwithUserName:(NSString*)user_account{
-    NSString* headURL = [NSString stringWithFormat:@"http://s9.pimg.tw/avatar/%@/0/0/zoomcrop/90x90.png?v=",user_account];
-    [self.headimage loadImageWithURL:[NSURL URLWithString:headURL]];
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:user_account forKey:@"role"];
+    [defaults synchronize];
+    
+    if ([user_account isEqualToString:@"joe"]) {
+        self.headimage.image = [UIImage imageNamed:@"joe.png"];
+    }
+    else if ([user_account isEqualToString:@"zonble"]){
+        self.headimage.image = [UIImage imageNamed:@"zonble.png"];
+    }
+    else{
+        NSString* headURL = [NSString stringWithFormat:@"http://s9.pimg.tw/avatar/%@/0/0/zoomcrop/90x90.png?v=",user_account];
+        [self.headimage loadImageWithURL:[NSURL URLWithString:headURL]];
+    }
 }
 
 - (IBAction)touchGameStart:(id)sender {
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:self.headimage.image forKey:@"rolehead"];
-    [defaults synchronize];
     
     GameVC* gameVC = [self.storyboard instantiateViewControllerWithIdentifier:@"game"];
     gameVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
